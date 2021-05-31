@@ -8,6 +8,6 @@ routes.get('/', (request, response) =>
 );
 // middleware
 routes.use(express.json());
-routes.use(express.urlencoded());
+//routes.use(express.urlencoded());
 
 export default routes;
