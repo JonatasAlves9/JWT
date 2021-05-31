@@ -1,0 +1,17 @@
+{
+  "type": "postgres",
+  "host": "www.example.com",
+  "port": 2400,
+  "username": "jonatas",
+  "password": "123456",
+  "database": "example",
+  "entities": [
+    "./src/models/*.ts"
+  ],
+  "migrations": [
+    "./src/database/migrations/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
