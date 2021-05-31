@@ -1,6 +1,8 @@
 import express, { Router } from 'express';
 
 
+import userRouter from './users.routes';
+
 const routes = Router();
 
 routes.get('/', (request, response) =>
@@ -8,6 +10,7 @@ routes.get('/', (request, response) =>
 );
 // middleware
 routes.use(express.json());
+routes.use('/users', userRouter);
 //routes.use(express.urlencoded());
 
 export default routes;
