@@ -18,7 +18,10 @@ class CreateUserService {
   }: Request): Promise<User> {
     const userRepository = getRepository(User);
 
-    const findUserInSameDate = await userRepository.findOne();
+    const findUserInSameDate = await userRepository.findOne({
+      where: { email },
+    });
+    
     if (findUserInSameDate) {
       throw Error('this user is already booked');
     }
