@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { parseISO } from 'date-fns';
 import { getCustomRepository } from 'typeorm';
+import 'dotenv/config';
+import jwt from 'jsonwebtoken';
 
 import UserRepository from '../repositories/UserRepository';
 import CreateUserService from './../services/CreateUserService';
@@ -33,6 +35,12 @@ userRouter.post('/', async (request, response) => {
   }
 });
 
+declare var process : {
+  env: {
+    SECRET: string
+  }
+}
+
 userRouter.post('/login', async (request, response) => {
     try {
       const { email, password } = request.body;
@@ -42,7 +50,12 @@ userRouter.post('/login', async (request, response) => {
       const checkAdminExists = await userRepository.findOne({
         where: { email, password },
       });
+
+      console.log(process.env.SECRET)
   
+      var token = jwt.sign({ email }, process.env.SECRET, {
+        expiresIn: 300 // expires in 5min
+      });
   
       if (!checkAdminExists) {
         return response.status(400).json({ error: "user not exist" });
