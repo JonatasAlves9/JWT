@@ -8,13 +8,13 @@ no backend existem 3 rotas para ela. Sendo elas:
 - criarUser (post);
 - login (post);
 - verUsers (get).
-<p>Quando o usuário que já está cadastrado no banco de dados faz seu login, é gerado uma chave de autenticação que se expirará em 5 minutos, sendo possível alterar esse valor, então com essa chave, autenticamos nossa rota de *verUsers*, sendo possível apenas acessá-la passando no cabeçalho da requisição o token gerado ao login, todas essas etapas de guardar o token e enviá-lo depois para o servidor de volta é feito pelo client, não passando nada disso para o usuário.</p>
+<p>Quando o usuário que já está cadastrado no banco de dados faz seu login, é gerado uma chave de autenticação que se expirará em 5 minutos, sendo possível alterar esse valor, então com essa chave, autenticamos nossa rota de <b>verUsers</b>, sendo possível apenas acessá-la passando no cabeçalho da requisição o token gerado ao login, todas essas etapas de guardar o token e enviá-lo depois para o servidor de volta é feito pelo client, não passando nada disso para o usuário.</p>
 
 
 ### Instalando as depedências
 
 ```
-**yarn** 
+<b>yarn</b> 
 ou
 **npm install**
 ```
