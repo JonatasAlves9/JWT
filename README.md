@@ -3,8 +3,8 @@
 <p>Projeto feito no intuito de aplicar todods os passos para uma aplicação mais segura
 com o uso de JWT (JSON Web Token).</p>
 
-<p>O código funciona de uma forma simples, temos no banco de dados uma tabela chamada *users*, que por sua vez
-no backend existem 3 rotas para ela. Sendo elas:</p>
+O código funciona de uma forma simples, temos no banco de dados uma tabela chamada *users*, que por sua vez
+no backend existem 3 rotas para ela. Sendo elas:
 - criarUser (post);
 - login (post);
 - verUsers (get).
