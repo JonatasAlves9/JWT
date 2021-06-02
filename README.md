@@ -14,15 +14,15 @@ no backend existem 3 rotas para ela. Sendo elas:
 ### Instalando as depedências
 
 ```
-<b>yarn</b> 
+yarn
 ou
-**npm install**
+npm install
 ```
 
 ### Rodando projeto
 
 ```
-**yarn run dev:server**
+yarn run dev:server
 ou
-**npm run dev:server**
+npm run dev:server
 ```
